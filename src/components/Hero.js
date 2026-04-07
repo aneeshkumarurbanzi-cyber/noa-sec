@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-[#0a0a0f]">
-      <section id="home" className="scroll-mt-24"></section>
+      <section id="home"></section>
       {/* Glow */}
       <div
         aria-hidden="true"
