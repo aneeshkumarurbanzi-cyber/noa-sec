@@ -6,13 +6,17 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-[#0a0a0f]">
-      <section id="home"></section>
+    <section
+      id="home" // ✅ FIXED
+      className="relative min-h-screen flex items-center overflow-hidden bg-[#0a0a0f] scroll-mt-24"
+    >
       {/* Glow */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -left-40 top-1/3 w-[600px] h-[600px] rounded-full opacity-10"
-        style={{ background: "radial-gradient(circle, #0ea5e9 0%, transparent 70%)" }}
+        style={{
+          background: "radial-gradient(circle, #0ea5e9 0%, transparent 70%)",
+        }}
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8 pt-24 pb-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full">
@@ -24,7 +28,6 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="flex flex-col gap-6"
         >
-
           {/* Badge */}
           <motion.span
             initial={{ opacity: 0, y: 20 }}
@@ -38,7 +41,7 @@ export default function Hero() {
             </span>
           </motion.span>
 
-          {/* Headline */}
+          {/* Heading */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -49,14 +52,14 @@ export default function Hero() {
             <span className="text-[#0ea5e9]">Dominate.</span>
           </motion.h1>
 
-          {/* Body */}
+          {/* Text */}
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
             className="text-gray-400 text-base leading-relaxed max-w-md"
           >
-            Real-World Cybersecurity Training &amp; Expert Security Services —
+            Real-World Cybersecurity Training & Expert Security Services —
             Kottayam | Kerala. NoaSec prepares cybersecurity professionals and
             protects organizations through practical, industry-aligned training.
           </motion.p>
@@ -69,13 +72,14 @@ export default function Hero() {
             className="flex flex-wrap items-center gap-4 mt-2"
           >
             <Link
-              href="#courses"
+              href="/#courses" // ✅ FIX (works from any page)
               className="px-6 py-3 rounded-md bg-[#0ea5e9] hover:bg-[#38bdf8] text-white text-sm font-semibold transition"
             >
               Explore Our Courses
             </Link>
+
             <Link
-              href="#services"
+              href="/#services" // ✅ FIX
               className="px-6 py-3 text-white text-sm font-semibold border border-white/20 rounded-md hover:bg-white/5 transition"
             >
               View Security Services
