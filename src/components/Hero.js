@@ -99,7 +99,7 @@ export default function Hero() {
             className="w-full max-w-lg rounded-xl overflow-hidden border border-white/10  bg-[#0d1520]"
           >
             <Image
-  src="/hero.png"
+  src="/hero-img.png"
   width={720}
   height={480}
   alt="dashboard"
