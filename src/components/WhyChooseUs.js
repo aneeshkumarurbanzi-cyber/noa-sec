@@ -12,7 +12,7 @@ export default function WhyChooseUs() {
       viewport={{ once: true }}
       className="bg-[#05070d] text-white py-20 px-6 md:px-16 scroll-mt-24"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto -mt-19 ">
 
         {/* Header */}
         <div className="text-center mb-16">

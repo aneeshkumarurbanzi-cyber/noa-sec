@@ -96,10 +96,10 @@ export default function Hero() {
         >
           <motion.div
             whileHover={{ scale: 1.03 }}
-            className="w-full max-w-lg rounded-xl overflow-hidden border border-white/10 aspect-[4/3] bg-[#0d1520]"
+            className="w-full max-w-lg rounded-xl overflow-hidden border border-white/10  bg-[#0d1520]"
           >
             <Image
-              src="/hero-monitors.png"
+              src="/hero-monito.png"
               width={720}
               height={480}
               alt="dashboard"

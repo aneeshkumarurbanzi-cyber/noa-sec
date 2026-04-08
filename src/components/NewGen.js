@@ -96,7 +96,7 @@ export default function NewGen() {
               transition={{ duration: 0.3 }}
             >
               <Image
-                src="/newgen-monitors.png"
+                src="/new.png"
                 width={600}
                 height={400}
                 alt="Cyber dashboard"

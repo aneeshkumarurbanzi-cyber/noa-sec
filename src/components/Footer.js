@@ -42,8 +42,8 @@ export default function Footer() {
 
         <div>
           <h3 className="mb-4">Contact</h3>
-          <p className="text-gray-400 text-sm">R4, Centerspace, XIII/284 A, Anjanasree Arcade Annankunnu Road, Nagampadom Kottayam PIN : 686001</p>
-          <p className="text-gray-400 text-sm">7034733944 </p>
+          <p className="text-gray-400 text-sm">R4, Centerspace, XIII/284 A, Anjanasree Arcade Annankunnu Road, Nagampadom Kottayam PIN : 686001</p><br/>
+          <p className="text-gray-400 text-sm">7034733944 </p><br/>
           <p className="text-gray-400 text-sm">noasecsolutions@gmail.com </p>
         </div>
       </div>
