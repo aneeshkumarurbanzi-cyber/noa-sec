@@ -48,8 +48,8 @@ export default function Hero() {
             transition={{ delay: 0.3 }}
             className="text-4xl md:text-6xl font-bold leading-tight text-white"
           >
-            NoaSec- No Access.{" "}
-            <span className="text-[#0ea5e9]">Only Security.</span>
+            Defend. Detect.{" "}
+            <span className="text-[#0ea5e9]">Dominate.</span>
           </motion.h1>
 
           {/* Text */}
@@ -59,7 +59,9 @@ export default function Hero() {
             transition={{ delay: 0.4 }}
             className="text-gray-400 text-base leading-relaxed max-w-md"
           >
-            NoaSec represents a security-first approach where unauthorized access is eliminated and only trusted, protected access is allowed, ensuring complete digital security.
+            Real-World Cybersecurity Training & Expert Security Services —
+            Kottayam | Kerala. NoaSec prepares cybersecurity professionals and
+            protects organizations through practical, industry-aligned training.
           </motion.p>
 
           {/* Buttons */}

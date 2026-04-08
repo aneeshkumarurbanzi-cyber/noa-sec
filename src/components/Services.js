@@ -52,7 +52,7 @@ export default function Services() {
               className="flex flex-col justify-between p-6 rounded-xl bg-[#0d1520] border border-white/10 hover:border-[#0ea5e9]/40 transition group"
             >
               <div>
-                <h3 className="text-white font-semibold text-sm mb-2">
+                <h3 className="text-white font-semibold text-12 mb-2">
                   {s.title}
                 </h3>
                 <p className="text-gray-400 text-xs leading-relaxed">
