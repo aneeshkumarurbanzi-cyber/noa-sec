@@ -77,7 +77,7 @@ export default function ContactPage() {
                 <p className="text-gray-400 uppercase text-xs mb-1">
                   Electronic Mail
                 </p>
-                <p>noasecsolutions@gmail.com </p>
+                <p>Info@noasecsolutions.com </p>
                
               </div>
 

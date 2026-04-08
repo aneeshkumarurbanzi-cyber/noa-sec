@@ -48,8 +48,8 @@ export default function Hero() {
             transition={{ delay: 0.3 }}
             className="text-4xl md:text-6xl font-bold leading-tight text-white"
           >
-            Defend. Detect.{" "}
-            <span className="text-[#0ea5e9]">Dominate.</span>
+            NoaSec- No Access.{" "}
+            <span className="text-[#0ea5e9]">Only Security.</span>
           </motion.h1>
 
           {/* Text */}
@@ -59,9 +59,7 @@ export default function Hero() {
             transition={{ delay: 0.4 }}
             className="text-gray-400 text-base leading-relaxed max-w-md"
           >
-            Real-World Cybersecurity Training & Expert Security Services —
-            Kottayam | Kerala. NoaSec prepares cybersecurity professionals and
-            protects organizations through practical, industry-aligned training.
+            NoaSec represents a security-first approach where unauthorized access is eliminated and only trusted, protected access is allowed, ensuring complete digital security.
           </motion.p>
 
           {/* Buttons */}
@@ -99,12 +97,13 @@ export default function Hero() {
             className="w-full max-w-lg rounded-xl overflow-hidden border border-white/10  bg-[#0d1520]"
           >
             <Image
-              src="/hero-monito.png"
-              width={720}
-              height={480}
-              alt="dashboard"
-              className="w-full object-cover"
-            />
+  src="/hero-monito.png"
+  width={720}
+  height={480}
+  alt="dashboard"
+  priority
+  className="w-full h-auto object-cover"
+/>
           </motion.div>
 
           {/* Floating stat */}

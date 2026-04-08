@@ -95,13 +95,13 @@ export default function NewGen() {
               whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.3 }}
             >
-              <Image
-                src="/new.png"
-                width={600}
-                height={400}
-                alt="Cyber dashboard"
-                className="rounded-md object-cover"
-              />
+             <Image
+  src="/new.png"
+  width={600}
+  height={400}
+  alt="image"
+  className="w-full h-auto"
+/>
             </motion.div>
           </div>
         </motion.div>
