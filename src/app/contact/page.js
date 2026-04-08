@@ -67,25 +67,25 @@ export default function ContactPage() {
 
               <div>
                 <p className="text-gray-400 uppercase text-xs mb-1">
-                  Global HQ
+                  R4, Centerspace, XIII/284 A, Anjanasree Arcade Annankunnu Road, Nagampadom 
                 </p>
                 <p></p>
-                <p className="text-gray-400">Trivandrum</p>
+                <p className="text-gray-400">Kottayam PIN : 686001</p>
               </div>
 
               <div>
                 <p className="text-gray-400 uppercase text-xs mb-1">
                   Electronic Mail
                 </p>
-                <p>protocol@noasec.io</p>
-                <p className="text-gray-400">careers@noasec.io</p>
+                <p>noasecsolutions@gmail.com </p>
+               
               </div>
 
               <div>
                 <p className="text-gray-400 uppercase text-xs mb-1">
                   Secure Line
                 </p>
-                <p>+1400 888 888</p>
+                <p>7034733944</p>
               </div>
 
             </div>

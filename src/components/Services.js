@@ -1,99 +1,57 @@
+"use client";
+
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Services() {
   const services = [
-    {
-      title: "Network Penetration Testing",
-      desc: "Rigorous offensive assessments targeting your core infrastructure to identify mission-critical gaps.",
-      cta: "Learn More",
-      href: "/services/network-penetration-testing",
-    },
-    {
-      title: "Managed SOC Operations",
-      desc: "24/7 technical surveillance and incident response powered by our proprietary threat intelligence.",
-      cta: "Learn More",
-      href: "/services/managed-soc-operations",
-    },
-    {
-      title: "Digital Evidence Collection",
-      desc: "Post-breach analysis and recovery protocols to secure chain of custody and understand vector origin.",
-      cta: "Learn More",
-      href: "/services/digital-evidence-collection",
-    },
-    {
-      title: "Cloud Security Solutions",
-      desc: "Hardening multi-cloud architectures with zero-trust principles and containerized safety locks.",
-      cta: "Learn More",
-      href: "/services/cloud-security-solutions",
-    },
-    {
-      title: "Web Application Pentesting",
-      desc: "Deep-dive assessments of web apps targeting OWASP Top 10.",
-      cta: "Learn More",
-      href: "/services/web-application-pentesting",
-    },
-    {
-      title: "Vulnerability Assessment",
-      desc: "Systematic scanning and prioritization of vulnerabilities.",
-      cta: "Learn More",
-      href: "/services/vulnerability-assessment",
-    },
-    {
-      title: "Incident Response Services",
-      desc: "Rapid containment and recovery workflows.",
-      cta: "Learn More",
-      href: "/services/incident-response-services",
-    },
-    {
-      title: "Threat Intelligence Hunting",
-      desc: "Proactive threat hunting using intelligence feeds.",
-      cta: "Learn More",
-      href: "/services/threat-intelligence-hunting",
-    },
-    {
-      title: "Disk & Memory Forensics",
-      desc: "Deep forensic extraction and analysis.",
-      cta: "Learn More",
-      href: "/services/disk-memory-forensics",
-    },
-    {
-      title: "Malware Analysis",
-      desc: "Static and dynamic malware dissection.",
-      cta: "Learn More",
-      href: "/services/malware-analysis",
-    },
-    {
-      title: "Server & Firewall Hardening",
-      desc: "CIS-benchmark hardening of systems.",
-      cta: "Learn More",
-      href: "/services/server-firewall-hardening",
-    },
-    {
-      title: "Linux & Windows Administration",
-      desc: "Secure OS-level administration and patching.",
-      cta: "Learn More",
-      href: "/services/linux-windows-administration",
-    },
+    { title: "Network Penetration Testing", desc: "Rigorous offensive assessments targeting your core infrastructure.", href: "/#" },
+    { title: "Web Application Pen Testing", desc: "Deep testing of web apps targeting OWASP Top 10 vulnerabilities.", href: "/#" },
+    { title: "Mobile Application Pen Testing", desc: "Security testing for Android and iOS apps.", href: "/#" },
+    { title: "API Pen Testing", desc: "Testing APIs for authentication flaws and data leaks.", href: "/#" },
+    { title: "Cloud Pen Testing", desc: "Security assessments for AWS, Azure, and cloud-native environments.", href: "/#" },
+    { title: "Server & Firewall Hardening", desc: "CIS benchmark-based hardening of systems.", href: "/#" },
+    { title: "Linux & Windows Hardening", desc: "OS-level hardening and secure configurations.", href: "/#" },
+    { title: "Cloud Security Solutions", desc: "Zero-trust architecture and cloud protection.", href: "/#" },
+    { title: "Managed SOC Operations", desc: "24/7 monitoring, detection, and response.", href: "/#" },
+    { title: "Incident Response Services", desc: "Rapid containment and recovery from attacks.", href: "/#" },
+    { title: "Threat Intelligence Hunting", desc: "Proactive threat hunting using intelligence feeds.", href: "/#" },
+    { title: "Malware Analysis", desc: "Static and dynamic malware analysis.", href: "/services/malware-analysis" },
+    { title: "Disk & Memory Forensics", desc: "Forensic analysis of storage and memory.", href: "/#" },
+    { title: "Digital Evidence Collection", desc: "Secure evidence handling and investigation.", href: "/#" },
   ];
 
   return (
-    <section className="bg-[#0a0a0f] py-20 px-8">
+    <section id="services" className="bg-[#0a0a0f] py-20 px-6 md:px-12">
       <div className="max-w-7xl mx-auto">
-        <section id="services"></section>
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
-          Enterprise Shielding Services
-        </h2>
 
-        <p className="text-gray-400 text-sm max-w-md mb-12">
-          Bespoke security solutions for high-stakes environments.
-        </p>
+        {/* Heading animation */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+            Enterprise Shielding Services
+          </h2>
 
-        {/* GRID */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {services.map((s) => (
-            <div
+          <p className="text-gray-400 text-sm max-w-md mb-12">
+            Bespoke security solutions for high-stakes environments.
+          </p>
+        </motion.div>
+
+        {/* Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+          {services.map((s, i) => (
+            <motion.div
               key={s.title}
-              className="flex flex-col gap-4 p-6 rounded-xl bg-[#0d1520] border border-white/10 hover:border-[#0ea5e9]/40 transition group"
+              initial={{ opacity: 0, y: 40, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.5, delay: i * 0.05 }}
+              viewport={{ once: true }}
+              className="flex flex-col justify-between p-6 rounded-xl bg-[#0d1520] border border-white/10 hover:border-[#0ea5e9]/40 transition group"
             >
               <div>
                 <h3 className="text-white font-semibold text-sm mb-2">
@@ -104,15 +62,15 @@ export default function Services() {
                 </p>
               </div>
 
-              {/* ✅ FIXED LINK */}
               <Link
                 href={s.href}
-                className="mt-auto text-[#0ea5e9] text-xs font-semibold tracking-widest uppercase hover:text-[#38bdf8]"
+                className="mt-6 text-[#0ea5e9] text-xs font-semibold tracking-widest uppercase hover:text-[#38bdf8]"
               >
-                {s.cta} →
+                Learn More →
               </Link>
-            </div>
+            </motion.div>
           ))}
+
         </div>
 
       </div>
