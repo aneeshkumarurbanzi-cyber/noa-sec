@@ -11,45 +11,14 @@ export default function NewGen() {
     >
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center w-full">
 
-        {/* LEFT IMAGE */}
-        <motion.div
-          initial={{ opacity: 0, x: -80 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="relative flex justify-center"
-        >
-          <div className="relative">
-
-            {/* corners */}
-            <div className="absolute -top-4 -left-4 w-10 h-10 border-l-2 border-t-2 border-white/30"></div>
-            <div className="absolute -bottom-4 -right-4 w-10 h-10 border-r-2 border-b-2 border-white/30"></div>
-
-            <motion.div
-              whileHover={{ scale: 1.03 }}
-              transition={{ duration: 0.3 }}
-            >
-              <Image
-                src="/newgen-monitors.png"
-                width={600}
-                height={400}
-                alt="Cyber dashboard"
-                className="rounded-md object-cover"
-              />
-            </motion.div>
-
-          </div>
-        </motion.div>
-
-        {/* RIGHT CONTENT */}
+        {/* RIGHT CONTENT (comes first in mobile) */}
         <motion.div
           initial={{ opacity: 0, x: 80 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="flex flex-col gap-6"
+          className="flex flex-col gap-6 order-1 md:order-2"
         >
-
           {/* Heading */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -107,7 +76,34 @@ export default function NewGen() {
               </motion.li>
             ))}
           </motion.ul>
+        </motion.div>
 
+        {/* LEFT IMAGE (moves to bottom on mobile) */}
+        <motion.div
+          initial={{ opacity: 0, x: -80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="relative flex justify-center order-2 md:order-1"
+        >
+          <div className="relative">
+            {/* corners */}
+            <div className="absolute -top-4 -left-4 w-10 h-10 border-l-2 border-t-2 border-white/30"></div>
+            <div className="absolute -bottom-4 -right-4 w-10 h-10 border-r-2 border-b-2 border-white/30"></div>
+
+            <motion.div
+              whileHover={{ scale: 1.03 }}
+              transition={{ duration: 0.3 }}
+            >
+              <Image
+                src="/newgen-monitors.png"
+                width={600}
+                height={400}
+                alt="Cyber dashboard"
+                className="rounded-md object-cover"
+              />
+            </motion.div>
+          </div>
         </motion.div>
 
       </div>

@@ -1,11 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function WhyChooseUs() {
   return (
     <motion.section
-      
       initial={{ opacity: 0, scale: 0.9 }}
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
@@ -26,7 +26,6 @@ export default function WhyChooseUs() {
 
         {/* Cards */}
         <div className="grid md:grid-cols-4 gap-6 mb-16">
-
           <div className="bg-[#0c0f17] p-6 rounded-md border border-white/5 hover:border-[#7dd3fc]/40 transition">
             <div className="text-[#7dd3fc] text-xl mb-4">🧪</div>
             <h3 className="font-semibold mb-2">Hands-on Labs</h3>
@@ -58,7 +57,6 @@ export default function WhyChooseUs() {
               Direct pipeline to industry opportunities and hands-on experience.
             </p>
           </div>
-
         </div>
 
         {/* CTA BOX */}
@@ -74,13 +72,21 @@ export default function WhyChooseUs() {
           </div>
 
           <div className="flex flex-col sm:flex-row items-center gap-4">
-            <button className="px-6 py-3 bg-[#7dd3fc] text-black font-semibold rounded-md hover:bg-[#38bdf8] transition">
-              Start Learning Today
-            </button>
 
-            <button className="px-6 py-3 border border-white/20 rounded-md text-white hover:bg-white/5 transition">
-              Get a Security Assessment
-            </button>
+            {/* ✅ Button 1 */}
+            <Link href="/contact">
+              <button className="px-6 py-3 bg-[#7dd3fc] text-black font-semibold rounded-md hover:bg-[#38bdf8] transition">
+                Start Learning Today
+              </button>
+            </Link>
+
+            {/* ✅ Button 2 */}
+            <Link href="/contact">
+              <button className="px-6 py-3 border border-white/20 rounded-md text-white hover:bg-white/5 transition">
+                Get a Security Assessment
+              </button>
+            </Link>
+
           </div>
 
         </div>
