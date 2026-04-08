@@ -1,93 +1,121 @@
-"use client";
-
-import Image from "next/image";
-import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Services() {
+  const services = [
+    {
+      title: "Network Penetration Testing",
+      desc: "Rigorous offensive assessments targeting your core infrastructure to identify mission-critical gaps.",
+      cta: "Learn More",
+      href: "/services/network-penetration-testing",
+    },
+    {
+      title: "Managed SOC Operations",
+      desc: "24/7 technical surveillance and incident response powered by our proprietary threat intelligence.",
+      cta: "Learn More",
+      href: "/services/managed-soc-operations",
+    },
+    {
+      title: "Digital Evidence Collection",
+      desc: "Post-breach analysis and recovery protocols to secure chain of custody and understand vector origin.",
+      cta: "Learn More",
+      href: "/services/digital-evidence-collection",
+    },
+    {
+      title: "Cloud Security Solutions",
+      desc: "Hardening multi-cloud architectures with zero-trust principles and containerized safety locks.",
+      cta: "Learn More",
+      href: "/services/cloud-security-solutions",
+    },
+    {
+      title: "Web Application Pentesting",
+      desc: "Deep-dive assessments of web apps targeting OWASP Top 10.",
+      cta: "Learn More",
+      href: "/services/web-application-pentesting",
+    },
+    {
+      title: "Vulnerability Assessment",
+      desc: "Systematic scanning and prioritization of vulnerabilities.",
+      cta: "Learn More",
+      href: "/services/vulnerability-assessment",
+    },
+    {
+      title: "Incident Response Services",
+      desc: "Rapid containment and recovery workflows.",
+      cta: "Learn More",
+      href: "/services/incident-response-services",
+    },
+    {
+      title: "Threat Intelligence Hunting",
+      desc: "Proactive threat hunting using intelligence feeds.",
+      cta: "Learn More",
+      href: "/services/threat-intelligence-hunting",
+    },
+    {
+      title: "Disk & Memory Forensics",
+      desc: "Deep forensic extraction and analysis.",
+      cta: "Learn More",
+      href: "/services/disk-memory-forensics",
+    },
+    {
+      title: "Malware Analysis",
+      desc: "Static and dynamic malware dissection.",
+      cta: "Learn More",
+      href: "/services/malware-analysis",
+    },
+    {
+      title: "Server & Firewall Hardening",
+      desc: "CIS-benchmark hardening of systems.",
+      cta: "Learn More",
+      href: "/services/server-firewall-hardening",
+    },
+    {
+      title: "Linux & Windows Administration",
+      desc: "Secure OS-level administration and patching.",
+      cta: "Learn More",
+      href: "/services/linux-windows-administration",
+    },
+  ];
+
   return (
-    <motion.section
-      id="services"
-      initial={{ opacity: 0, scale: 0.9 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-      viewport={{ once: true }}
-      className="bg-[#05070d] text-white py-20 px-6 md:px-16 scroll-mt-24"
-    >
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <section className="bg-[#0a0a0f] py-20 px-8">
+      <div className="max-w-7xl mx-auto">
+        <section id="services"></section>
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+          Enterprise Shielding Services
+        </h2>
 
-        {/* LEFT CONTENT */}
-        <div>
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8">
-            Enterprise Security <br /> Services
-          </h2>
+        <p className="text-gray-400 text-sm max-w-md mb-12">
+          Bespoke security solutions for high-stakes environments.
+        </p>
 
-          <div className="space-y-8">
-
-            <div className="flex items-start gap-4">
-              <div className="w-10 h-10 flex items-center justify-center rounded-md bg-[#0c0f17] border border-white/10">
-                🎯
-              </div>
+        {/* GRID */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {services.map((s) => (
+            <div
+              key={s.title}
+              className="flex flex-col gap-4 p-6 rounded-xl bg-[#0d1520] border border-white/10 hover:border-[#0ea5e9]/40 transition group"
+            >
               <div>
-                <h3 className="font-semibold">Penetration Testing</h3>
-                <p className="text-gray-400 text-sm">
-                  Identifying and exploiting vulnerabilities before attackers do.
+                <h3 className="text-white font-semibold text-sm mb-2">
+                  {s.title}
+                </h3>
+                <p className="text-gray-400 text-xs leading-relaxed">
+                  {s.desc}
                 </p>
               </div>
+
+              {/* ✅ FIXED LINK */}
+              <Link
+                href={s.href}
+                className="mt-auto text-[#0ea5e9] text-xs font-semibold tracking-widest uppercase hover:text-[#38bdf8]"
+              >
+                {s.cta} →
+              </Link>
             </div>
-
-            <div className="flex items-start gap-4">
-              <div className="w-10 h-10 flex items-center justify-center rounded-md bg-[#0c0f17] border border-white/10">
-                📊
-              </div>
-              <div>
-                <h3 className="font-semibold">SOC Operations</h3>
-                <p className="text-gray-400 text-sm">
-                  24/7 monitoring and response for your critical infrastructure.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="w-10 h-10 flex items-center justify-center rounded-md bg-[#0c0f17] border border-white/10">
-                🧬
-              </div>
-              <div>
-                <h3 className="font-semibold">Digital Forensics</h3>
-                <p className="text-gray-400 text-sm">
-                  Deep analysis and evidence collection for digital incidents.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="w-10 h-10 flex items-center justify-center rounded-md bg-[#0c0f17] border border-white/10">
-                ☁️
-              </div>
-              <div>
-                <h3 className="font-semibold">Cloud Security</h3>
-                <p className="text-gray-400 text-sm">
-                  Hardening cloud environments against cloud-native threats.
-                </p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        {/* RIGHT IMAGE */}
-        <div className="relative">
-          <Image
-            src="/server-rack.jpg"
-            alt="Server racks"
-            width={600}
-            height={800}
-            className="rounded-xl object-cover"
-          />
-
-          <div className="absolute inset-0 bg-gradient-to-l from-black/60 to-transparent rounded-xl"></div>
+          ))}
         </div>
 
       </div>
-    </motion.section>
+    </section>
   );
 }
