@@ -11,6 +11,7 @@ export default function Services() {
     { title: "API Pen Testing", desc: "Testing APIs for authentication flaws and data leaks.", href: "/#" },
     { title: "Cloud Pen Testing", desc: "Security assessments for AWS, Azure, and cloud-native environments.", href: "/#" },
     { title: "Server & Firewall Hardening", desc: "CIS benchmark-based hardening of systems.", href: "/#" },
+    { title: "Endpoint Security", desc: "Secure every device. Stop every threat.", href: "/#" },
     { title: "Linux & Windows Hardening", desc: "OS-level hardening and secure configurations.", href: "/#" },
     { title: "Cloud Security Solutions", desc: "Zero-trust architecture and cloud protection.", href: "/#" },
     { title: "Managed SOC Operations", desc: "24/7 monitoring, detection, and response.", href: "/#" },
