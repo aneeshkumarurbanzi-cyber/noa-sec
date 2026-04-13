@@ -7,7 +7,7 @@ export default function NewGen() {
   return (
     <section
       id="about"
-      className="min-h-screen bg-[#05070d] flex items-center px-6 md:px-16"
+      className="min-h-10 bg-[#05070d] flex items-center px-6 md:px-16 "
     >
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center w-full">
 

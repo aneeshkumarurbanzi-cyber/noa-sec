@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <footer
       id="contact"
-      className="bg-[#05070d] text-white px-6 md:px-16 pt-16 pb-8 border-t border-white/5"
+      className="bg-[#05070d] text-white px-6 md:px-16 pt-16 pb-8 border-t border-white/5 -mt-15"
     >
       <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-10">
 
@@ -49,7 +49,7 @@ export default function Footer() {
       </div>
 
       <div className="mt-10 border-t border-white/10 pt-4 text-center text-gray-500 text-sm">
-        © {new Date().getFullYear()} NoaSec. All rights reserved.
+        {new Date().getFullYear()} Copyright © NoaSec Powered by Urbanzi Solutions
       </div>
     </footer>
   );
