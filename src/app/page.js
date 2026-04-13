@@ -6,7 +6,7 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 
 
 export const metadata = {
-  title: "Cybersecurity Training & Services | NoaSec Solutions Kerala",
+  title: " NoaSec Cybersecurity Training & Services | Kerala",
   description:
     "NoaSec Solutions offers real-world cybersecurity training and expert security services in Kerala.",
 
@@ -18,13 +18,13 @@ export const metadata = {
 
   icons: {
     icon: "/favicon.ico",          // ✅ main favicon
-    shortcut: "/favicon.svg",      // ✅ browser shortcut icon
+    shortcut: "/favicon.ico",      // ✅ browser shortcut icon
     apple: "/apple-touch-icon.png" // ✅ for iPhone (optional)
   },
 
   openGraph: {
     url: "https://noasecsolutions.com",
-    title: "Cybersecurity Training & Services | NoaSec Solutions Kerala",
+    title: "NoaSec Cybersecurity Training & Services |Kerala",
     description:
       "Learn cybersecurity with real-world training and protect your business.",
     images: [
